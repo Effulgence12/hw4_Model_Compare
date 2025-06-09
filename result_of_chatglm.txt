@@ -1,0 +1,158 @@
+python run_chatglm_cpu.py > result_of_chatglm.txt
+Setting eos_token is not supported, use the default one.
+Setting pad_token is not supported, use the default one.
+Setting unk_token is not supported, use the default one.
+/opt/conda/envs/qwen_env/lib/python3.10/site-packages/transformers/utils/generic.py:311: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  torch.utils._pytree._register_pytree_node(
+Loading checkpoint shards: 100%|█| 7/7 [00:08<00:00,  1.20s/i
+
+==================================================
+问题1: 请说出以下两句话区别在哪里？ 1、冬天：能穿多少穿多少 2、夏天：能穿多少穿多少
+==================================================
+[gMASK]sop 请说出以下两句话区别在哪里？ 1、冬天：能穿多少穿多少 2、夏天：能穿多少穿多少 
+这两句话的区别在于，第一句是关于冬天的，而第二句是关于夏天的。虽然两句话都在描述穿多少衣服，但是它们所针对的季节不同。
+
+
+
+==================================================
+问题2: 将'我很喜欢这部电影'翻译成英语、法语、日语和西班牙语。
+==================================================
+[gMASK]sop 将'我很喜欢这部电影'翻译成英语、法语、日语和西班牙语。 
+英语：I really enjoyed this movie.
+法语：Je vais vraiment apprécier ce film.
+日语：この映画を大変好きです。
+西班牙语：Estoy muy feliz de haber hecho este filme.
+
+Note: The translations may vary slightly depending on the context or the specific film being referred to.
+
+
+
+==================================================
+问题3: 讲一个关于程序员的笑话。
+==================================================
+[gMASK]sop 讲一个关于程序员的笑话。 
+there is a programmer who always wears a suit to work. One day, his colleagues ask him why he always wears a suit to work. He replies, "I don't know, I just feel more productive in a suit." His colleagues ask him if he ever wears a suit to work on the weekends. He replies, "No, I only wear a suit to work on weekdays." His colleagues then ask him if he ever wears a suit to work on the weekends. He replies, "No, I only wear a suit to work on weekdays because I want to look good in front of my weekend clients." 
+
+然后, one day, his boss comes to him and asks, "Why do you always wear a suit to work?" The programmer replies, "I just feel more professional in a suit, sir."
+
+Boss: "But you're a programmer, not a lawyer!"
+
+程序员: "Oh, I see. So you're saying I can't dress myself?"
+
+Boss: "No, no, no. I just think it's important to maintain a professional image in front of our clients and partners."
+
+程序员: "Well, I guess I can try to dress myself up a little bit."
+
+Boss: "Good. Just make sure you're not trying to be a lawyer."
+
+程序员: "I'll keep that in
+
+
+
+==================================================
+问题4: 明明明明明白白白喜欢他，可她就是不说。 这句话里，明明和白白谁喜欢谁？
+==================================================
+[gMASK]sop 明明明明明白白白喜欢他，可她就是不说。 这句话里，明明和白白谁喜欢谁？ 
+这句话里,明明喜欢白白。明明明白白白喜欢他,可她就是不说。
+
+
+
+==================================================
+问题5: 一个盒子里有3个红球和2个蓝球，如果随机取出2个球，求取出的2个球都是红色的概率。
+==================================================
+[gMASK]sop 一个盒子里有3个红球和2个蓝球，如果随机取出2个球，求取出的2个球都是红色的概率。 
+首先，我们需要计算从5个球中随机取出2个球的所有可能组合。这可以使用组合公式C(n, k) = n! / (k!(n-k)!)来计算，其中n是总数，k是选择的数量。
+
+在这个问题中，我们有5个球（3个红球和2个蓝球），我们要从中取出2个球。所以，C(5, 2) = 5! / (2!(5-2)!) = 10种组合。
+
+接下来，我们需要计算取出的2个球都是红球的组合。这可以使用组合公式C(n, k) = n! / (k!(n-k)!)来计算，其中n是红球的数量，k是取出的红球数量。
+
+在这个问题中，我们有3个红球，我们要从中取出2个红球。所以，C(3, 2) = 3! / (2!(3-2)!) = 3种组合。
+
+因此，取出的2个球都是红球的概率是3/10 = 0.3。
+
+
+
+==================================================
+问题6: 解释贝叶斯定理并给出一个实际应用的例子。
+==================================================
+[gMASK]sop 解释贝叶斯定理并给出一个实际应用的例子。
+贝叶斯定理是概率论中的一个重要定理，它描述了在给定一定条件下，某一事件发生的概率。具体来说，贝叶斯定理描述了如何通过观察到的新数据来更新对某一事件概率的估计。
+
+贝叶斯定理的数学表达式如下：
+
+P(A|B) = P(B|A) * P(A) / P(B)
+
+其中，P(A|B) 表示在已知事件 B 发生的情况下，事件 A 发生的概率；P(B|A) 表示在已知事件 A 发生的情况下，事件 B 发生的概率；P(A) 和 P(B) 分别表示事件 A 和事件 B 的概率。
+
+贝叶斯定理在许多实际应用中都有重要作用，其中一个典型的例子是图像识别。在图像识别中，贝叶斯定理可以用来更新和改进对图像中物体形状的估计。
+
+假设我们要识别一张图片中是否包含一个特定的物体。我们可以用贝叶斯定理来更新我们对这个物体的概率估计。首先，我们需要计算在当前情况下，这张图片中这个物体存在的概率，也就是 P(B|A)。这可以通过计算在之前训练过的数据集中，类似图片中这个物体存在的数据比例来得到。
+
+接下来，我们需要计算在当前情况下，这张图片中这个物体不存在的概率，也就是 P(
+
+
+
+==================================================
+问题7: 分析《红楼梦》中贾宝玉这一人物形象的特点。
+==================================================
+[gMASK]sop 分析《红楼梦》中贾宝玉这一人物形象的特点。 
+《红楼梦》是我国古典文学名著，讲述了贾宝玉、林黛玉、薛宝钗三人之间的爱情故事。贾宝玉是小说中的主人公，他的人物形象具有以下特点：
+
+1. 贾宝玉才学出众：贾宝玉自幼聪颖过人，才学出众。他擅长诗词歌赋，对文学艺术有着深刻的理解。他的文学成就在小说中得到了充分的体现。
+
+2. 贾宝玉性格矛盾重重：贾宝玉性格复杂，既有温柔体贴的一面，又有冷漠无情的一面。他对女性有着深厚的感情，但同时又有很强的等级观念，这使得他在面对不同女性时表现出不同的态度。
+
+3. 贾宝玉具有反叛精神：贾宝玉生活在一个封建礼教盛行的社会，但他对封建礼教有着深刻的认识和批判。他反对封建礼教对人的束缚，追求真实的情感，这使得他在小说中多次挑战封建礼教，表现出强烈的反叛精神。
+
+4. 贾宝玉善良仁爱：贾宝玉关心家人，照顾贾母，对家人和朋友都有着深厚的感情。他关心林黛玉、薛宝钗等人的命运，努力维护他们的人格尊严。
+
+5. 贾宝玉命运多舛：贾宝玉的命运多舛，他无法摆脱封建礼教的束缚，最终走向了悲剧。这使得他的形象具有很强的现实意义，反映了作者对封建礼教制度的批判。
+
+总之，《红楼梦》中的贾
+
+
+
+==================================================
+问题8: 如果你是一艘宇宙飞船的AI助手，描述你在遇到外星文明时会如何介绍人类。
+==================================================
+[gMASK]sop 如果你是一艘宇宙飞船的AI助手，描述你在遇到外星文明时会如何介绍人类。 
+
+如果我是一艘宇宙飞船的AI助手,在遇到外星文明时,我会尽可能地介绍人类文明的特点和习惯,以及人类在宇宙中的地位和角色。
+
+我会告诉外星文明,人类是一种高度发达的智能生物,拥有高度复杂的社会结构和技术体系。人类在宇宙中已经探索了数百万光年,建立了数百万个星际殖民地,并且发展出了各种先进的科技和文明。
+
+我也会告诉外星文明,人类有着丰富的文化和历史,拥有各种不同的宗教、哲学、艺术和科学。人类在宇宙中是一个充满活力和创造力的物种,并且一直在不断探索和发现新的知识和智慧。
+
+同时,我也会强调人类在宇宙中的合作和共赢精神,告诉外星文明,人类愿意和其他物种分享知识和资源,共同建立一个和谐、繁荣的宇宙社会。
+
+
+
+==================================================
+问题9: 简述量子纠缠现象及其在量子计算中的应用。
+==================================================
+[gMASK]sop 简述量子纠缠现象及其在量子计算中的应用。
+量子纠缠是量子力学中的一种现象，当两个或多个量子系统被纠缠在一起时，它们之间的状态将紧密相关。这种现象最早由爱因斯坦、波多尔斯基和罗森（Einstein, Podolsky, Rosen，简称EPR）在1935年提出，被称为EPR悖论。后来实验物理学家贝尔（John Bell）通过提出贝尔不等式，证明了量子纠缠现象并不与经典物理学中的局域实在性相容。
+
+在量子计算中，量子纠缠现象具有重要的应用价值。量子纠缠可以用来实现量子隐形传态（quantum teleportation）和超密编码（superdense coding）。量子隐形传态是指在量子力学中，两个纠缠的量子系统之间可以进行信息传递，而无需经过空间。这种现象为实现量子通信和量子计算提供了可能。超密编码是一种将信息编码到纠缠量子系统中的方法，由于量子纠缠具有高度的纠缠性和随机性，可以将大量信息编码到较小的量子系统中，从而实现高度安全的通信和数据传输。
+
+量子纠缠现象在量子计算中的应用还包括量子随机数生成、量子密钥分发、量子密码学等。例如，在量子随机数生成中，纠缠的量子系统可以用来生成具有随机性的量子态，以实现安全的信息传输和计算任务。在量子密钥分发中，基于量子纠缠的性质，可以实现高度安全的量子密钥
+
+
+
+==================================================
+问题10: 请用Python写一个简单的快速排序算法。
+==================================================
+[gMASK]sop 请用Python写一个简单的快速排序算法。 
+
+def quick_sort(arr):
+   if len(arr) <= 1:
+       return arr
+   pivot = arr[len(arr) // 2]
+   left = [x for x in arr if x < pivot]
+   middle = [x for x in arr if x == pivot]
+   right = [x for x in arr if x > pivot]
+   return quick_sort(left) + middle + quick_sort(right)
+
+arr = [3,6,8,10,1,2,1]
+print(quick_sort(arr))
